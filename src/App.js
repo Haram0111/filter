@@ -1,28 +1,17 @@
 import logo from './logo.svg';
 import './App.css';
+import {Button} from 'react-bootstrap';
 import { useState } from "react";
-import Multiselect from "multiselect-react-dropdown";
+import MultiCheckFilter from './MultiCheckFilter';
+import MultiFilter from './MultiFilter';
 
 
 function App() {
 
-  const [food, setFood] = useState(["Burger", "Pizza", "Sandwich"]);
-  
   return (
-    <div className="App">
-      <Multiselect
-        isObject={false}
-        onRemove={(event) => {
-          console.log(event);
-        }}
-        onSelect={(event) => {
-          console.log(event);
-        }}
-        options={food}
-        selectedValues={["Burger"]}
-        showCheckbox
-      />
-    </div>
+    <>
+      <MultiFilter></MultiFilter>
+    </>
   );
 }
 
